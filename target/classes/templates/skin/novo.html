@@ -1,0 +1,36 @@
+<div th:replace="compartilhado/top"></div>
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <h1 class="h3 mb-2 text-gray-800">Nova Skin</h1>
+        <p class="mb-4">
+            Aqui voce pode cadastrar uma nova Skin
+        </p>
+
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4" style="padding: 30px;">
+            <form method="POST" action="/skin/criar" onsubmit="return confirm('Confirma ação')">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" class="form-control" required id="nome" name="nome" placeholder="Digite o seu nome">
+                </div>
+                <div class="form-group">
+                    <label for="email">Raridade</label>
+                    <input type="text" class="form-control" required id="raridade" name="raridade" placeholder="Digite uma raridade (Baixa, Média ou Alta)">
+                </div>
+                <div class="form-group">
+                    <label for="senha">Preço</label>
+                    <input type="text" class="form-control" required id="preco" name="preco" placeholder="Digite o preço">
+                </div>
+                <div class="form-group">
+                    <label for="observacao">Observação</label>
+                    <textarea class="form-control" id="observacao" name="observacao" placeholder="Digite o seu observação"></textarea>
+                </div>
+                <button type="submit" class="btn btn-danger">Enviar</button>
+            </form>
+        </div>
+
+    </div>
+    <!-- /.container-fluid -->
+<div th:replace="compartilhado/baixo"></div>

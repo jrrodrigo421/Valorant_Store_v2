@@ -1,0 +1,36 @@
+<div th:replace="compartilhado/top"></div>
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <h1 class="h3 mb-2 text-gray-800">Edição de Skins</h1>
+        <p class="mb-4">
+            <!-- Aqui iremos editar o administrador -->
+        </p>
+
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4" style="padding: 30px;">
+            <form method="POST" th:action="@{'/skin/' + ${skin?.id} + '/atualizar'}">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" class="form-control" th:value="${skin?.nome}" required id="nome" name="nome" placeholder="Digite o nome da Skin">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" th:value="${skin?.raridade}" required id="raridade" name="raridade" placeholder="Digite a raridade da Skin">
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="text" class="form-control" th:value="${skin?.preco}" required id="preco" name="preco" placeholder="Digite o preco da skin">
+                </div>
+                <div class="form-group">
+                    <label for="observacao">Observação</label>
+                    <textarea class="form-control" id="observacao" name="observacao" placeholder="Digite o seu observação" th:inline="text">[[${skin.observacao}]]</textarea>
+                </div>
+                <button type="submit" class="btn btn-danger">Enviar</button>
+            </form>
+        </div>
+
+    </div>
+    <!-- /.container-fluid -->
+<div th:replace="compartilhado/baixo"></div>

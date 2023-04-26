@@ -1,0 +1,57 @@
+<div th:replace="compartilhado/top"></div>
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <h1 class="h3 mb-2 text-gray-800">Skins</h1>
+        <p class="mb-4">
+            Aqui irá listar as Skins do catalogo
+        </p>
+
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <a href="/skin/novo" class="btn btn-danger" style="margin-right: 20px;">Nova Skin</a>
+                <h6 class="m-0 font-weight-bold text-danger" style="display: inline-block;">Lista de Skins</h6>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nome</th>
+                                <th>Raridade</th>
+                                <th>Preço</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nome</th>
+                                <th>Raridade</th>
+                                <th>Preço</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr th:each="skin : ${skin}">
+                                <td th:text="${skin.id}"></td>
+                                <td th:text="${skin.nome}"></td>
+                                <td th:text="${skin.raridade}"></td>
+                                <td th:text="${skin.preco}"></td>
+                                <td><a th:href="@{'/skin/' + ${skin.id}}" class="btn btn-warning">Alterar</td>
+                                <td><a href="#" th:onclick="'if(confirm(\'Confirma ?\')) { window.location.href = \'' + @{/skin/{id}(id=${skin.id})} + '/excluir\' } '" class="btn btn-danger">Excluir</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container-fluid -->
+<div th:replace="compartilhado/baixo"></div>
