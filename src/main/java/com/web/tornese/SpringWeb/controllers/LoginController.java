@@ -24,6 +24,11 @@ public class LoginController {
     return "login/index";
   }
 
+  // @GetMapping("/catalogo")
+  // public String catalogo() {
+  // return "catalogo/index";
+  // }
+
   @PostMapping("/logar")
   public String logar(Model model, Administrador admParam, String lembrar, HttpServletResponse response)
       throws IOException {
