@@ -41,13 +41,13 @@ public class Administrador {
     this.id = id;
   }
 
-  // public String getSenha() {
-  // return this.senha;
-  // }
-
   public String getSenha() {
-    return senha.substring(0, 3) + "****";
+    return this.senha;
   }
+
+  // public String getSenha() {
+  // return senha.substring(0, 3) + "****";
+  // }
 
   public void setSenha(String senha) {
     this.senha = senha;
