@@ -5,7 +5,7 @@
 
 ## Descrição
 
-Este projeto é uma aplicação web feita em Java 17 + Spring Boot + Thymeleaf + MySQL 8.
+Este projeto é uma aplicação web feita em Java 11 + Spring Boot + Thymeleaf + MySQL 8.
 
 ## Deploy
 
