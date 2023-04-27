@@ -41,8 +41,12 @@ public class Administrador {
     this.id = id;
   }
 
+  // public String getSenha() {
+  // return this.senha;
+  // }
+
   public String getSenha() {
-    return this.senha;
+    return senha.substring(0, 3) + "****";
   }
 
   public void setSenha(String senha) {
